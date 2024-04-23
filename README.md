@@ -13,4 +13,7 @@
     - Expire access token relatively quickly. After refresh token expires, you need to sign into the webpage again, to get a new set of tokens
     - So the length of the access token is always shorter than the length of the refresh token
 - ORM - Object relational mapping
-    - Write normal code, and Python/Django handles converting that into all the database operations that need to be performed
+  - Write normal code, and Python/Django handles converting that into all the database operations that need to be performed
+- Serializers
+  - They take data that exists on the server and convert it into a form that can be read by other technologies (JSON)
+  - It also packages data that gets sent to the server and bundles it in a way that can be read by the server and saved to the database
