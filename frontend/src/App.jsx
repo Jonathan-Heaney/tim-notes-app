@@ -6,11 +6,13 @@ import Home from './pages/Home';
 import NotFound from './pages/NotFound';
 import ProtectedRoute from './components/ProtectedRoute';
 
+// Clear access/refresh tokens from local storage when we log out
 function Logout() {
   localStorage.clear();
   return <Navigate to="/login" />;
 }
 
+// When someone registers, we want to clear their tokens
 function RegisterAndLogout() {
   localStorage.clear();
   return <Register />;
@@ -23,6 +25,7 @@ function App() {
         <Route
           path="/"
           element={
+            // You can't access the Home component unless you have a valid access token. It's wrapped by our Protected Route
             <ProtectedRoute>
               <Home />
             </ProtectedRoute>

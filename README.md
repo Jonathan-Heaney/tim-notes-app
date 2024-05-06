@@ -28,3 +28,6 @@
     - So in general, interceptors act as quality control, to enhance/adjust the data flow between client and server and make sure everything is in order before/after the server processes the request
     - In our case, the interceptor takes any request we send in and automatically adds in the right headers, so we don't need to manually write out that logic multiple times throughout our code. So the interceptor checks if we have the access token, and if we do, then it'll add it to the request headers so we don't need to think about access tokens anymore
   - You pass JWT access tokens with Axios by creating an Authorization header (automatically handed by Axios), and it needs to start with "Bearer" and then have the name of the token
+  - React-Router-DOM - might be deprecated going forward with Next.js stuff, but it's been used a lot
+    - Wrap routes with <Browser Router> and <Routes>
+    - For individual Routes, specify a path and an element (component) to render when the user visits that path
