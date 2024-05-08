@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import api from '../api';
 import Note from '../components/Note';
-import "../styles/Home.css"
+import '../styles/Home.css';
 
 function Home() {
   const [notes, setNotes] = useState([]);
-  const [content, setContent] = useState('');
+  const [content, setContent] = useState(''); // These could be in separate component also
   const [title, setTitle] = useState('');
 
   useEffect(() => {
@@ -18,9 +18,8 @@ function Home() {
       .then((res) => res.data)
       .then((data) => {
         setNotes(data);
-        console.log(data);
       })
-      .catch((err) => alert(err));
+      .catch((error) => alert(error));
   };
 
   const deleteNote = (id) => {
@@ -29,7 +28,7 @@ function Home() {
       .then((res) => {
         if (res.status === 204) alert('Note deleted!');
         else alert('Failed to delete note.');
-        getNotes();
+        getNotes(); // This is not the best way of doing this
       })
       .catch((error) => alert(error));
   };

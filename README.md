@@ -21,6 +21,7 @@
     - It also packages data that gets sent to the server and bundles it in a way that can be read by the server and saved to the database
 
 - Frontend
+
   - It's possible to store things on local storage in the browser, and then create keys to access that
   - Axios is a helpful way to send network requests. Analogy - Axios is the waiter in a restaurant, the React app is the patron, the server is the kitchen
   - Axios interceptors
@@ -31,3 +32,9 @@
   - React-Router-DOM - might be deprecated going forward with Next.js stuff, but it's been used a lot
     - Wrap routes with <Browser Router> and <Routes>
     - For individual Routes, specify a path and an element (component) to render when the user visits that path
+  - We use lots of Axios built-in methods - get, post, etc
+  - One way to loop through a potential list of items to display in React is to use the map() method. In this case, looping through all of the notes and displaying their title, content, and created date
+
+  ## Next Steps
+
+  - Refactor Home component - split into multiple components, one for displaying notes and one for creating new notes
